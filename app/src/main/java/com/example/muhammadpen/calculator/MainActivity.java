@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     //Initializing the Views
 
-    GridLayout gridLayout;
+    GridLayout buttonsgridLayout;
     LinearLayout linearLayout;
     TextView resultTextView;
     Button zeroButton;
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Setting up the Views
 
-        gridLayout = (GridLayout) findViewById(R.id.gridLayout);
+        buttonsgridLayout = (GridLayout) findViewById(R.id.buttonsGridLayout);
         linearLayout = (LinearLayout) findViewById(R.id.linearLayout);
         resultTextView = (TextView) findViewById(R.id.resultTextView);
         zeroButton = (Button) findViewById(R.id.zeroButton);

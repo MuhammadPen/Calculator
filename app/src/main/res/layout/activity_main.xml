@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentConstraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.muhammadpen.calculator.MainActivity">
@@ -8,14 +10,17 @@
 
     <LinearLayout
 
-        android:elevation="10sp"
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="126dp"
-        android:orientation="horizontal">
+        android:layout_marginTop="16dp"
+        android:elevation="10sp"
+        android:gravity="top"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/resultTextView"
@@ -28,104 +33,163 @@
     </LinearLayout>
 
     <GridLayout
-        android:id="@+id/gridLayout"
-        android:layout_width="wrap_content"
+        android:id="@+id/buttonsGridLayout"
+        android:layout_width="283dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="36dp">
-
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="200dp"
+        android:padding="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
 
         <Button
-            android:textSize="27sp"
             android:id="@+id/zeroButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="1"
             android:layout_row="3"
-            android:text="@string/zero" />
+            android:text="@string/zero"
+            android:textSize="27sp" />
 
         <Button
-            android:textSize="27sp"
             android:id="@+id/oneButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="0"
             android:layout_row="0"
-            android:text="@string/one" />
+            android:text="@string/one"
+            android:textSize="27sp" />
 
         <Button
-            android:textSize="27sp"
             android:id="@+id/twoButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="1"
             android:layout_row="0"
-            android:text="@string/two" />
+            android:text="@string/two"
+            android:textSize="27sp" />
 
         <Button
-            android:textSize="27sp"
             android:id="@+id/threeButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="2"
             android:layout_row="0"
-            android:text="@string/three" />
+            android:text="@string/three"
+            android:textSize="27sp" />
 
         <Button
-            android:textSize="27sp"
             android:id="@+id/fourButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="0"
             android:layout_row="1"
-            android:text="@string/four" />
+            android:text="@string/four"
+            android:textSize="27sp" />
 
         <Button
-            android:textSize="27sp"
             android:id="@+id/fiveButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="1"
             android:layout_row="1"
-            android:text="@string/five" />
+            android:text="@string/five"
+            android:textSize="27sp" />
 
         <Button
-            android:textSize="27sp"
             android:id="@+id/sixButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="2"
             android:layout_row="1"
-            android:text="@string/six" />
+            android:text="@string/six"
+            android:textSize="27sp" />
 
         <Button
-            android:textSize="27sp"
             android:id="@+id/sevenButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="0"
             android:layout_row="2"
-            android:text="@string/seven" />
+            android:text="@string/seven"
+            android:textSize="27sp" />
 
         <Button
-            android:textSize="27sp"
             android:id="@+id/eightButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="1"
             android:layout_row="2"
-            android:text="@string/eight" />
+            android:text="@string/eight"
+            android:textSize="27sp" />
 
         <Button
-            android:textSize="27sp"
             android:id="@+id/nineButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="2"
             android:layout_row="2"
-            android:text="@string/nine" />
+            android:text="@string/nine"
+            android:textSize="27sp" />
     </GridLayout>
 
-</RelativeLayout>
+    <GridLayout
+        android:id="@+id/operationsGridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="500dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/plusButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:text="+"
+            android:textSize="30sp"
+            tools:layout_editor_absoluteX="48dp"
+            tools:layout_editor_absoluteY="494dp" />
+
+        <Button
+            android:id="@+id/minusButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="0"
+            android:text="-"
+            android:textSize="30sp"
+            tools:layout_editor_absoluteX="48dp"
+            tools:layout_editor_absoluteY="494dp" />
+
+        <Button
+            android:id="@+id/multiplyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_row="0"
+            android:text="*"
+            android:textSize="30sp"
+            tools:layout_editor_absoluteX="48dp"
+            tools:layout_editor_absoluteY="494dp" />
+
+        <Button
+            android:id="@+id/divideButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="3"
+            android:layout_row="0"
+            android:text="/"
+            android:textSize="30sp"
+            tools:layout_editor_absoluteX="48dp"
+            tools:layout_editor_absoluteY="494dp" />
+
+    </GridLayout>
+
+</android.support.constraint.ConstraintLayout>
